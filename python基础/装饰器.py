@@ -1,13 +1,25 @@
-# 装饰器
-def my_decorator(func):
-    def wrapper():
-        print("函数执行前")
-        func()
-        print("函数执行后")
-    return wrapper
 
-@my_decorator
-def say_hello():
-    print("Hello!")
 
-say_hello()
+
+def log_class(cls):
+    class Wrapper:
+        def __init__(self, *args, **kwargs):
+            self.wrapped = cls(*args, **kwargs)
+
+        def __getattr__(self, name):
+            return getattr(self.wrapped, name)
+
+        def display(self):
+            print("调用前")
+            self.wrapped.display()
+            print("调用后")
+
+    return Wrapper
+
+@log_class
+class MyClass:
+    def display(self):
+        print("原方法")
+
+obj = MyClass()
+obj.display()
