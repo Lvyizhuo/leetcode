@@ -1,0 +1,14 @@
+6
+eat tea tan ate nat bat
+1
+a
+5
+abc abc abc abc abc
+4
+ab ba ab ba
+3
+abc cba bca
+3
+ab abc ba
+2
+longword gnolword
