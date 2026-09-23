@@ -14,7 +14,7 @@
 #
 # 脚本结构（四段解耦，改题时只动对应那一段）：
 #   ① class Solution  -- 纯算法，与 LeetCode 提交区一致，不碰任何 IO
-#   ② parse_input()   -- stdin 文本 -> 逐组实参（唯一负责"读"的地方）
+#   ② parse_input()   -- stdin 文本 -> 逐组实参（唯一负责"读"的地方
 #   ③ format_output() -- 算法返回值 -> 输出字符串（唯一负责"写"的地方）
 #   ④ main()          -- ACM 主流程：逐组算、逐组输出
 #
